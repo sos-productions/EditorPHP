@@ -54,3 +54,6 @@ echo $editor->render([
     ],
 ]);
 ```
+
+# License
+MIT
