@@ -1,0 +1,14 @@
+{
+    "name": "nhujanen/editorphp",
+    "description": "PHP renderer for EditorJS",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Niko Hujanen",
+            "email": "niko.hujanen@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    }
+}
