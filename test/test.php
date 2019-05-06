@@ -54,9 +54,7 @@ echo $editor->render([
         ],
         [
             'type' => 'foo',
-            'data' => [
-                'faa' => 'sng',
-            ],
+            'data' => [],
         ]
     ]
 ]);
