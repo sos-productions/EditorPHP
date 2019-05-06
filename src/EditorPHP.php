@@ -30,6 +30,13 @@ class EditorPHP
         $this->ttl      = $ttl;
     }
 
+    public function clearCache(): void
+    {
+        if (null !== $this->cache) {
+            $this->cache->clear();
+        }
+    }
+
     public function render(array $data = []): string
     {
         if (null !== $this->cache) {
