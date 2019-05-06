@@ -3,9 +3,12 @@
 require '../src/EditorPHP.php';
 require '../src/EditorPHP/Renderer.php';
 require '../src/EditorPHP/Block.php';
-require '../src/EditorPHP/Block/Header.php';
-require '../src/EditorPHP/Block/Paragraph.php';
-require '../src/EditorPHP/Block/List.php';
+require '../src/EditorPHP/Block/HeaderBlock.php';
+require '../src/EditorPHP/Block/ParagraphBlock.php';
+require '../src/EditorPHP/Block/ListBlock.php';
+require '../src/EditorPHP/Block/ImageBlock.php';
+require '../src/EditorPHP/Block/CodeBlock.php';
+require '../src/EditorPHP/Block/TableBlock.php';
 
 class Fooler extends \nhujanen\EditorPHP\Block
 {
@@ -39,6 +42,32 @@ echo $editor->render([
             'type' => 'paragraph',
             'data' => [
                 'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis cursus ultricies pellentesque. Nam at lorem tincidunt ex hendrerit euismod id sed elit. Etiam lorem nunc, suscipit eu aliquam sed, gravida tincidunt arcu. Maecenas vulputate pretium facilisis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+            ],
+        ],
+        [
+            "type" => "table",
+            "data" => [
+                "content" => [ 
+                    ["Kine", "1 pcs", "100$"], 
+                    ["Pigs", "3 pcs", "200$"], 
+                    ["Chickens", "12 pcs", "150$"] 
+                ],
+            ],
+        ],
+        [
+            'type' => 'code',
+            'data' => [
+                'code' => '<foo>\n<bar/>\n</foo>',
+            ],
+        ],
+        [
+            "type" => "image",
+            "data" => [
+                "url" => "https://www.tesla.com/tesla_theme/assets/img/_vehicle_redesign/roadster_and_semi/roadster/hero.jpg",
+                "caption" => "Roadster // tesla.com",
+                "withBorder" => false,
+                "withBackground" => false,
+                "stretched" => true
             ],
         ],
         [

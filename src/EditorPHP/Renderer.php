@@ -15,6 +15,9 @@ class Renderer
             'header'        => \nhujanen\EditorPHP\Block\HeaderBlock::class,
             'paragraph'     => \nhujanen\EditorPHP\Block\ParagraphBlock::class,
             'list'          => \nhujanen\EditorPHP\Block\ListBlock::class,
+            'image'         => \nhujanen\EditorPHP\Block\ImageBlock::class,
+            'code'          => \nhujanen\EditorPHP\Block\CodeBlock::class,
+            'table'         => \nhujanen\EditorPHP\Block\TableBlock::class,
         ];
 
         if (!file_exists($filename))
